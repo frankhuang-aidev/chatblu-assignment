@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+
+  /* Brand palette: deep navy ink, one electric blue, warm neutrals */
+  --color-ink: #0a1a2f;
+  --color-navy: #11294a;
+  --color-blu: #2563eb;
+  --color-blu-deep: #1d4ed8;
+  --color-blu-light: #8fb4ff;
+  --color-paper: #f7f5f0;
+  --color-sand: #ece8dd;
+  --color-mist: #5b6b7e;
+  --color-cloud: #b9c5d6;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-rise {
+  animation: rise 0.55s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise {
+    animation: none;
+  }
+}
